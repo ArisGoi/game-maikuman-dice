@@ -34,14 +34,15 @@
 
     .game-square{
         height: 350px;
-        margin-top: 60px;
+        margin-top: 40px;
     }
 
     .sq-element.btn-main{
         position: fixed;
-        bottom: 40px;
+        bottom: 10px;
         left: 50%;
         transform: translate(-50%, 0%);
+        font-size: 20px;
     }
 
     img.char-maiku{
