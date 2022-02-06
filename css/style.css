@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+.clearfix::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* Colors */
+:root{
+    --c-main: #FADE21;
+    --c-second: #BEFA21; 
+    --c-third: #ED5523;
+    --c-third-dark: #810900;
+
+    --c-text-light: white;
+    --c-text-dark: black;
+}
+
+
+/* common */
+body{
+    background-image: url(../img/pattern-bg.svg);
+    background-size: cover;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 600;
+}
+
+.container {
+    max-width: 1200px;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* main */
+.game-square{
+    height: 600px;
+    width: 85%;
+    border: 10px solid var(--c-main);
+    border-radius: 22px;
+    background-color: #4B4B4B;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sq-element{
+    position: absolute;
+}
+
+.logo{
+    height: 200px;
+    top: 0;
+    right: 0;
+    transform: translate(20%, -60%);
+}
+
+.wallet{
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 22px;
+
+    top: 0;
+    left: 0;
+    transform: translate(-25%, -50%);
+
+    background-color: var(--c-main);
+    color: var(--c-text-dark);
+}
+
+.btn-main{
+    text-align: center;
+    padding: 18px 25px;
+    border-radius: 22px;
+    font-size: 28px;
+    border: 5px solid var(--c-third-dark);
+    box-shadow: inset 2px 2px 1px 2px rgba(255,255,255,0.5);
+
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 600;
+    background-color: var(--c-third);
+    color: var(--c-text-light);
+
+    z-index: 10;
+}
+.sq-element.btn-main{
+    bottom: 0;
+    left: 0;
+    transform: translate(-25%, 50%);
+}
+
+/* MaikuMan */
+.char-maiku{
+    height: 270px;
+    bottom: 0;
+    right: 0;
+    transform: translate(50%, 40%);
+    filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.75));
+    z-index: 9;
+}
+.talk-maiku{
+    height: 100px;
+    min-width: 500px;
+    padding: 10px 80px 10px 20px;
+    bottom: 0;
+    right: 0;
+    transform: translate(0%, 65%);
+    z-index: 8;
+
+    border: 10px solid var(--c-main);
+    background-color: white;
+    font-size: 22px;
+}
+.maiku-dice{
+    top: 0;
+    left: 0;
+    transform: translate(-5%, -155%);
+    font-size: 22px;
+    color: var(--c-text-light);
+    z-index: 9;
+}
+.maiku-dice i{
+    font-size: 35px;
+}
+
+/* Player */
+.puntata{
+    color: var(--c-text-light);
+    font-size: 28px;
+}
+.puntata input, .puntata label{
+    vertical-align: middle;
+    height: 35px;
+}
+.puntata input{
+    width: 95px;
+    border-radius: 50px;
+    border: none;
+    padding: 0 10px;
+    background-color: var(--c-second);
+    color: var(--c-text-dark);
+    font-size: 22px;
+    text-align: center;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 600;
+}
+span#user_dice{
+    font-size: 120px;
+    color: var(--c-text-light);
+    margin-top: 20px;
+    filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.75));
+}
+
+/* Alert */
+.alert{
+    background-image: url(../img/pattern-bg.svg);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert-box{
+    position: relative;
+    width: 900px;
+    padding: 50px;
+    border-radius: 22px;
+    border: 10px solid var(--c-third);
+    background-color: var(--c-main);
+    margin: 60px 0px;
+    font-size: 30px;
+}
+.alert-box img{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    animation: dring 0.1s ease-in;
+    animation-delay: 0.8s;
+    animation-iteration-count: 6;
+}
+.alert.hide{
+    display: none;
+}
+/* ANIMATIONS */
+.char-maiku{
+    animation: float-maiku 4s infinite;
+}
+@keyframes float-maiku{
+    0%{
+        transform: translate(50%, 40%);
+    }
+    50%{
+        transform: translate(50%, 42%);
+    }
+    100%{
+        transform: translate(50%, 40%);
+    }
+}
+
+@keyframes dring{
+    0%{
+        transform: rotate(0deg);
+    }
+    33%{
+        transform: rotate(2deg);
+    }
+    66%{
+        transform: rotate(-2deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}

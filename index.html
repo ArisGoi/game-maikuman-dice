@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - Dadi</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- myCSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <main>
+        <div class="container">
+            <div class="game-square">
+
+                <!-- Portafoglio -->
+                <div class="sq-element wallet">
+                    <p><i class="fas fa-wallet"></i> <span id="user_wallet">100</span> €</p>
+                </div>
+
+                <!-- Logo -->
+                <img class="sq-element logo" src="img/logo.png" alt="">
+
+                <!-- Player -->
+                <div class="puntata">
+                    <label for="my_bit">La tua puntata: €</label>
+                    <input id="my_bit" type="number" placeholder="00"><span></span>
+                </div>
+
+                <span id="user_dice"><i class="fas fa-dice"></i></span>
+
+                <!-- bottone tira i dadi -->
+                <button class="sq-element btn-main" onclick="rollDice()">Tira i dadi</button>
+
+                <!-- Maikuman -->
+                <img class="sq-element char-maiku" src="img/chara_talk.png" alt="">
+                <div class="sq-element talk-maiku">
+                    <span id="esito">Hey ciao!<br>
+                    Inserisci una puntata e tira i dadi!</span>
+                    <div class="sq-element maiku-dice">Il tiro di Maikuman: <span id="cpu_dice"></span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ALERT!! -->
+        <div id="alert" class="alert hide">
+            <div class="puntata">
+                <label for="my_bit">La tua puntata: €</label>
+                <input id="my_bit" type="number" placeholder="00"><span></span>
+            </div>
+
+            <div class="alert-box">
+                <img src="img/chara_alert.png" alt="">
+                <p>Attento! Non hai inserito una puntata!!</p>
+            </div>
+        
+            <button class="btn-main" onclick="addHide()">Chiudi alert</button>
+        </div>
+        <!-- /ALERT!! -->
+
+        <!-- LOSE ALERT!! -->
+        <div id="loseAlert" class="alert hide">
+            <div class="alert-box">
+                <img src="img/chara_alert.png" alt="">
+                <p>HAI FINITO I SOLDI!! Ricarica la pagina</p>
+            </div>
+        </div>
+        <!-- /LOSE ALERT!! -->
+    </main>
+    
+    <script src="js/custom.js"></script>
+</body>
+</html>
