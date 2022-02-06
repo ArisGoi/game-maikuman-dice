@@ -34,7 +34,7 @@
 
     .game-square{
         height: 350px;
-        margin-top: 40px;
+        margin-top: 20px;
     }
 
     .sq-element.btn-main{
@@ -42,7 +42,8 @@
         bottom: 10px;
         left: 50%;
         transform: translate(-50%, 0%);
-        font-size: 20px;
+        font-size: 15px;
+        padding: 10px 16px;
     }
 
     img.char-maiku{
