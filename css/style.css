@@ -110,7 +110,7 @@ body{
     z-index: 9;
 }
 .talk-maiku{
-    height: 100px;
+    /* height: 100px; */
     min-width: 500px;
     padding: 10px 80px 10px 20px;
     bottom: 0;

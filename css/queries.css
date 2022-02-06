@@ -1,0 +1,79 @@
+@media screen and (max-width: 1290px){
+    img.logo{
+        height: 100px;
+        right: 50px;
+    }
+    img.char-maiku{
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 780px){
+
+    body, html{
+        overflow: hidden;
+    }
+
+    .container{
+        align-items: flex-start;
+    }
+    
+    .puntata{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .puntata #my_bit{
+        margin-top: 10px;
+    }
+
+    span#user_dice{
+        font-size: 80px;
+    }
+
+    .game-square{
+        height: 350px;
+        margin-top: 60px;
+    }
+
+    .sq-element.btn-main{
+        position: fixed;
+        bottom: 40px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+
+    img.char-maiku{
+        height: 120px;
+        animation: none;
+        transform: translate(73px, 193px);
+    }
+    .sq-element.talk-maiku{
+        min-width: 320px;
+        bottom: -120px;
+        min-height: 98px;
+        padding: 10px 20px 10px 20px;
+    }
+    .maiku-dice{
+        margin-left: 10px;
+        background-color: black;
+        padding: 5px;
+    }
+
+    #alert .puntata{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        padding: 20px;
+    }
+    .alert-box{
+        width: 320px;
+        text-align: center;
+    }
+    .alert-box img{
+        display: none;
+    }
+}

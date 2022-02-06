@@ -1,24 +1,3 @@
-// ------ Dice Game V1 -------
-// // 1) genero un numero casuale per l'utente e uno per il banco
-// var userDice = parseInt(Math.random() * 6) + 1;
-// var cpuDice = parseInt(Math.random() * 6) + 1;
-
-// // 2) creo una variabile che contiene i risultati
-// var risultati = 'il tuo dado: ' + userDice + '   il dado del banco: ' + cpuDice;
-
-// // 3) Stabilisco il vincitore e mostro i risultati e l'esito
-// if (userDice > cpuDice){
-//     alert(risultati + '   HAI VINTO!!')
-// } else if (userDice < cpuDice){
-//     alert(risultati + '   HAI PERSO!')
-// } else{
-//     alert(risultati + '   HAI UN PAREGGIO!')
-// }
-
-
-// ---------------------------
-// ------ Dice Game V2 -------
-// ----------vvvvv------------
 
 // valore di parteza del portafogli
 var myWallet = 100;
@@ -29,7 +8,9 @@ var diceFace = ['error 0', '<i class="fas fa-dice-one"></i>', '<i class="fas fa-
 
 function rollDice(){
 
-    if (isNaN(parseInt(document.getElementById('my_bit').value)) || document.getElementById('my_bit').value < 1){
+    const bitValue = document.getElementById('my_bit').value;
+    
+    if (isNaN(parseInt(bitValue)) || bitValue < 1 || bitValue > myWallet){
         document.getElementById("alert").classList.remove("hide");
     } else {
         // Tiro i dadi
@@ -41,7 +22,7 @@ function rollDice(){
         document.getElementById('cpu_dice').innerHTML = diceFace[cpuDice];
 
         // ottengo il valore della scommessa
-        var myBit = parseInt(document.getElementById('my_bit').value);
+        var myBit = parseInt(bitValue);
 
         if (userDice > cpuDice){ // VINTO
             
